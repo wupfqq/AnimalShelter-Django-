@@ -1,0 +1,24 @@
+
+
+{% extends 'animals/main_animal.html' %}
+{% block head %}
+    <header class="main-header" style="background-image: url('/media/photo/94002.jpg')">
+    <h1>Send mail to us</h1>
+</header>
+{% endblock %}
+{% block title %}{% endblock %}
+{% block infomain %}
+    <div class="adding">
+<form  method ='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button> Send:)</button>
+</form>
+</div>
+
+{% endblock %}
+{% block info %}
+
+
+{% endblock %}
+{% block contact %}{% endblock %}

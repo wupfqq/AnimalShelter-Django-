@@ -1,38 +1,26 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
 
-  <head>
+{% extends 'animals/main_animal.html' %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% block head %}
 
+      <header class="main-header"   {% if  title.photo  %}     style="background-image: url('/media/{{ title.photo }}')" {% endif %} >
+    <h1>Our <br> {{ title.name }}</h1>
+</header>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<link href="{% static 'css/style.css'%}" rel="stylesheet" >
+  {% endblock %}
+{% block title %}About our {{ title.name }}{% endblock %}
+  {% block infomain %}
+    Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+      Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+      sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+      apien. Mauris tempor maximus nisi in ornare.Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+      Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+      sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+      apien. Mauris tempor maximus nisi in ornare.
+  {% endblock %}
+{% block info %}
 
-    <title>Animal shelter</title>
-  </head>
-  <body>
-<div class="row">
+     {% include 'inc/_navbar.html' %}
 
-
-              <div class="card mb-3">
-              <div class="card-header">
-               Curator:
-              </div>
-
-              <div class="card-body">
-
-                <h5 class="card-title">{{ anim.name }}</h5>
-                <p class="card-text"> {{ anim.curator }}</p>
-                <a href="/" class="btn btn-primary">Read more...</a>
-              </div>
-              <div class="card-footer text-muted">
-                  {{ anim.category}}
-              </div>
-            </div>
-
-      </div>
-  </body>
-</html>
+{% endblock %}
+{% block contact %}{% endblock %}

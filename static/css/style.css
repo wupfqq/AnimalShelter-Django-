@@ -1,3 +1,22 @@
+
+@font-face {
+    font-family: 'JosefinSans'; /* Имя шрифта */
+    src: url(/media/Fonts/JosefinSans/static/JosefinSans-Thin.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Arvo';
+    src: url(/media/Fonts/Arvo/Arvo-Bold.ttf);
+     font-family: 'Playfair_display';
+    src: url(/media/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+    font-family: 'Urbanist';
+    src: url(/media/Fonts/Urbanist/static/Urbanist-Thin.ttf);
+
+}
+
+h1{
+    font-family: Urbanist;
+    font-size: 70px;
+    text-decoration: overline ;
+}
+
 body{
     background-color: #90abd3;
 }

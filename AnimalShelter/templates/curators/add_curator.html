@@ -1,0 +1,23 @@
+{% extends 'animals/main_animal.html' %}
+{% block head %}
+    <header class="main-header" style="background-image: url('/media/photo/curators/1.jpg')">
+    <h1>Add curator</h1>
+</header>
+{% endblock %}
+{% block title %}Why should you become a curator?{% endblock %}
+
+{% block info %}
+    <div class="adding">
+<form  action="{% url 'add_curator' %}", method='post'>
+{% csrf_token %}
+
+{{ form.as_p }}
+
+    <button> Become curator </button>
+    {{ form.non_field.errors }}
+</form>
+    </div>
+{% endblock %}
+{% block contact %}{% endblock %}
+</body>
+</html>

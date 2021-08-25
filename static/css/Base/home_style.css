@@ -1,0 +1,202 @@
+
+
+
+*{margin: 0; padding: 0;}
+@font-face {
+    font-family: 'JosefinSans'; /* Имя шрифта */
+    src: url(/media/Fonts/JosefinSans/static/JosefinSans-Thin.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Arvo';
+    src: url(/media/Fonts/Arvo/Arvo-Bold.ttf);
+     font-family: 'Playfair_display';
+    src: url(/media/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+    font-family: 'Urbanist';
+    src: url(/media/Fonts/Urbanist/static/Urbanist-Thin.ttf);
+    font-family: "Indie-Flower";
+    src:url(/media/Fonts/Indie_Flower/IndieFlower-Regular.ttf)
+}
+
+header.main-header{
+   background-image: url('/media/MainpP/Header/aus.webp');
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 850px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+h1{
+    padding: 200px 0px 0px 50%;
+    color: white;
+    text-decoration: overline;
+    text-align:center;
+    font-family: 'Arvo';
+    font-size: 120px;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+
+.panel {
+
+  background-color: #3f3f3f;
+    overflow: hidden;
+
+}
+
+.panel a {
+    font-family: Urbanist;
+    color: white;
+  float: left;
+  font-size: 35px;
+  height: 100px;
+  text-align: center;
+  padding: 10px 80px 10px 80px;
+  text-decoration: none;
+
+}
+
+.drpan {
+    font-size: 35px;
+  float: left;
+  overflow: hidden;
+    font-family: Urbanist;
+    color: white;
+}
+
+
+.drpan .butn {
+  font-size: 35px;
+    height: 120px;
+  outline: none;
+    border: none;
+  color: #ffffff;
+  padding:  10px 80px 10px 80px;
+  background-color: #ff6e00;
+  font-family: Urbanist;
+
+}
+
+.panel a:hover,.drpan:hover .butn {
+  background-color: #ff6e00;
+}
+
+.drc {
+  display: none;
+  position: absolute;
+  background-color: #3f3f3f;
+  min-width: 160px;
+
+}
+
+.drc a {
+  float: none;
+  color: #ffffff;
+  padding: 16px 16px;
+
+  display: block;
+  text-align: center;
+}
+
+.drc a:hover {
+  background-color: #ff6e00;
+}
+
+.drpan:hover .drc {
+  display: block;
+}
+
+.about{
+    font-family: Urbanist;
+    background-color: #606060;
+    height: 300px;
+    width: 100%;
+    font-size: 28px;
+    color: white;
+}
+
+.kit{
+      font-family: Urbanist;
+    background-color: #606060;
+    height: 550px;
+    width: 100%;
+    font-size: 28px;
+    color: white;
+}
+.kit p{
+    padding: 20px  20px 20px 450px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
+
+.pets{
+    font-family: Urbanist;
+    background-color: #ffffff;
+    height: 550px;
+    width: 100%;
+    font-size: 28px;
+    color: #000000;
+}
+.pets  p{
+    padding: 20px 450px 20px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
+
+.about  p{
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
+h2{
+    font-size: 55px;
+    text-align: center;
+    padding-top: 40px;
+
+}
+.pets h2{
+    padding: 20px 450px 20px 20px;
+    color:  #ff6e00;;
+}
+.about h2:hover{
+    color: #ff6e00;
+}
+.pets h2:hover{
+    color: #000000;
+}
+.kit h2:hover{
+    color: #ff6e00;
+}
+.circle{
+    border-radius: 200px;
+
+    height: 300px;
+    width: 420px;
+    padding: 20px;
+}
+.pets .circle{
+      float: right;
+}
+.kit .circle{
+      float: left;
+}
+
+.test r{
+    font-size: 80px;
+    color: #0a53be;
+}
+
+
+

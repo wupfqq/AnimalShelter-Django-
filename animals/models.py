@@ -9,7 +9,7 @@ class Animal(models.Model):
     appearence=models.TextField(blank=True,)
     description=models.TextField(blank=True,verbose_name='Character',default='A very nice pet!')
     photo=models.ImageField(upload_to='photo/', blank=True)
-    available=models.BooleanField(default=False,verbose_name='In home searching')
+    available=models.BooleanField(default=True,verbose_name='In home searching')
     curator=models.ForeignKey("Curator",on_delete=models.PROTECT,null=True)
     category=models.ForeignKey('Category',on_delete=models.PROTECT,null=False,verbose_name='Category')
 
@@ -21,7 +21,8 @@ class Animal(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='Category', db_index=True)
-
+    photo = models.ImageField(upload_to='photo/category', blank=True)
+    back_photo= models.ImageField(upload_to='photo/bphoto', blank=True)
 
     def __str__(self):
         return self.name
@@ -30,7 +31,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     def get_absolute_url(self):
-            return reverse('view_category', kwargs={"category_id": self.pk})
+            return reverse('category', kwargs={"category_id": self.pk})
 
 
 class Curator(models.Model):
@@ -44,6 +45,12 @@ class Curator(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('view_curators', kwargs={"curator_id": self.pk})
+        return reverse('curator_details', kwargs={"curator_id": self.pk})
 
+class News(models.Model):
+    title=models.CharField(max_length=140)
+    photo=models.ImageField(upload_to='photo/', blank='True')
+    description=models.TextField(blank=True)
 
+    def get_absolute_url(self):
+        return reverse('news', kwargs={"news_id": self.pk})

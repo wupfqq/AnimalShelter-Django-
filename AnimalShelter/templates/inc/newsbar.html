@@ -1,0 +1,21 @@
+
+
+{% load static %}
+{% for x in news %}
+  <div class="navbar" style="background-image: url({% if x.photo %} '/media/{{x.photo}}'
+        {% elif x.category.back_photo %}
+
+ '/media/{{x.category.back_photo}}'  {% endif %} )">
+<div class="outtablet">
+    <h3 >{{ x.title }}</h3>
+</div>
+<div class="tablet">
+    <p class="description">{{ x.description }}</p>
+    </div>
+       </div>
+</div>
+{% endfor %}
+
+
+
+

@@ -1,0 +1,394 @@
+
+
+
+*{margin: 0; padding: 0;}
+@font-face {
+    font-family: 'JosefinSans'; /* Имя шрифта */
+    src: url(/media/Fonts/JosefinSans/static/JosefinSans-Thin.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'Arvo';
+    src: url(/media/Fonts/Arvo/Arvo-Bold.ttf);
+     font-family: 'Playfair_display';
+    src: url(/media/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+    font-family: 'Urbanist';
+    src: url(/media/Fonts/Urbanist/static/Urbanist-Thin.ttf);
+    font-family: "Indie-Flower";
+    src:url(/media/Fonts/Indie_Flower/IndieFlower-Regular.ttf)
+}
+
+header.main-header{
+   background-image: url('/media/MainpP/Header/aus.webp');
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 850px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+h1{
+    padding: 200px 0px 0px 50%;
+    color: white;
+    text-decoration: overline;
+    text-align:center;
+    font-family: 'Arvo';
+    font-size: 120px;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+
+.panel {
+
+  background-color: #3f3f3f;
+    overflow: hidden;
+
+}
+
+.panel a {
+    font-family: Urbanist;
+    color: white;
+  float: left;
+  font-size: 35px;
+  height: 100px;
+  text-align: center;
+  padding: 10px 80px 10px 80px;
+  text-decoration: none;
+
+
+}
+
+.drpan {
+
+    font-size: 35px;
+  float: left;
+  overflow: hidden;
+    font-family: Urbanist;
+    color: white;
+}
+
+
+.drpan .butn {
+  font-size: 35px;
+    height: 120px;
+  outline: none;
+    border: none;
+  color: #ffffff;
+  padding:  10px 80px 10px 80px;
+  background-color: #ff6e00;
+  font-family: Urbanist;
+
+
+
+}
+
+.panel a:hover,.drpan:hover .butn {
+  background-color: #ff6e00;
+}
+
+.drc {
+  display: none;
+  position: absolute;
+  background-color: #3f3f3f;
+  min-width: 160px;
+
+}
+
+.drc a {
+  float: none;
+  color: #ffffff;
+  padding: 16px 16px;
+
+  display: block;
+  text-align: center;
+}
+
+.drc a:hover {
+  background-color: #ff6e00;
+}
+
+.drpan:hover .drc {
+  display: block;
+    position: absolute;
+    z-index: 3;
+}
+
+.about{
+    font-family: Urbanist;
+    background-color: #606060;
+    height: 300px;
+    width: 100%;
+    font-size: 28px;
+    color: white;
+}
+
+.kit{
+      font-family: Urbanist;
+    background-color: #606060;
+    height: 550px;
+    width: 100%;
+    font-size: 28px;
+    color: white;
+}
+.kit p{
+    padding: 20px  20px 20px 450px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
+
+.pets{
+    font-family: Urbanist;
+    background-color: #ffffff;
+    height: 550px;
+    width: 100%;
+    font-size: 28px;
+    color: #000000;
+}
+.pets  p{
+    padding: 20px 450px 20px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
+
+.about  p{
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
+h2{
+    font-size: 55px;
+    text-align: center;
+    padding-top: 40px;
+
+}
+.pets h2{
+    padding: 20px 450px 20px 20px;
+    color:  #ff6e00;;
+}
+.about h2:hover{
+    color: #ff6e00;
+}
+.pets h2:hover{
+    color: #000000;
+}
+.kit h2:hover{
+    color: #ff6e00;
+}
+.circle{
+    border-radius: 200px;
+
+    height: 300px;
+    width: 420px;
+    padding: 20px;
+}
+.pets .circle{
+      float: right;
+}
+.kit .circle{
+      float: left;
+}
+
+.test r{
+    font-size: 80px;
+    color: #0a53be;
+}
+.pages{
+padding: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    opacity: 100%;
+
+}
+.pagi{
+  display: inline-block;
+}
+
+.pagi a {
+padding: 25px 25px;
+   font-size: 30px;
+    font-family: Arvo;
+    background-color: white;
+    border-radius: 6px;
+    color:#ff6e00;
+    text-decoration: none;
+    float: right;
+    border: #ff6e00 solid 2px ;
+    margin: 0;
+
+ }
+
+.pagi a.tap{
+    background-color:#ff6e00 ;
+    color: white;
+    border-radius: 6px;
+}
+.pagi a:hover{
+  background-color: #f5d2ad;
+  border-radius: 5px;
+}
+
+.navbar{
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+     background-size: 100%;
+    border: white 2px solid;
+}
+
+.tablet::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+
+    width: 1000px;
+    height: 600px;
+    border-radius: 40px;
+    opacity: 0.6;
+    background-color: #2f2f2f;
+    float: right;
+
+}
+
+.tablet{
+    padding: 30px;
+    position: relative;
+    float: right;
+    overflow: hidden;
+    height: 600px;
+    width: 1000px;
+
+}
+
+.outtablet{
+    position: absolute;
+    padding: 25px;
+    margin: 25px;
+    border: white 2px solid;
+    z-index: 1;
+}
+.outtablet h3{
+    color: white;
+    font-family: Urbanist;
+    font-size: 70px;
+    opacity: 100%;
+
+    padding: 20px 0px 0px 0px;
+    text-decoration: overline;
+
+
+}
+.outtablet h4{
+    color: white;
+    font-family: Urbanist;
+    font-size: 30px;
+    opacity: 100%;
+
+
+}
+.curator{
+    color: white;
+    font-family: Urbanist;
+    font-size: 25px;
+    opacity: 100%;
+    text-align: center;
+
+    position: relative;
+}
+
+.ava{
+    margin: 60px;
+    padding: 0px 0px 0px 140px;
+    position: relative;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 35px;
+    color: white;
+    text-decoration: overline;
+}
+
+.contacts{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+
+}
+h5{
+
+    text-decoration: none;
+    margin: 0;
+    font-size: 80px;
+    text-align: center;
+    font-family: Urbanist;
+    color: #ff7300;
+}
+
+.contacts h5:hover{
+    color: black;
+}
+.contacts p{
+    color: #ff7300;
+    font-size: 65px;
+    font-family: Urbanist;
+}
+ul{
+    background-color:#606060;
+    width: 100%;
+    height: 300px;
+}
+li{
+    font-family: Urbanist;
+    color: #ff7300;
+    font-size: 60px;
+}
+.contacts h2{
+    font-family: Indie-Flower;
+    color: #ff7300;
+}
+.tablet p{
+    position: relative;
+    font-family: Urbanist;
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.adding{
+    background-color: #606060;
+}
+.adding p{
+    font-family: Urbanist;
+    color: white;
+   text-align: center;
+    font-size: 35px;
+    padding: 35px;
+}
+
+
+ .adding button {
+  background-color: #ff7300;
+  border: none;
+  color: white;
+  padding: 35px 35px;
+  text-align: center;
+  margin: 40px 20px 40px 900px;
+  display: inline-block;
+  font-size: 25px;
+}
+ .contacts a{
+     font-family: Urbanist;
+     font-size: 60px;
+     color:#ff7300;
+ }

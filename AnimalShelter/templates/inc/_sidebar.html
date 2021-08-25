@@ -1,13 +1,9 @@
+{% load animals_tags %}
 
-{% load products_tags %}
-{%   get_categ as caty %}
-{% comment %}
-<div class="col-md-8">
-              <div class="list-group">
-                  {% for y in caty %}
-                  <a href="{% url 'category' y.pk %}" class="list-group-item list-group-item-action active" aria-current="true">{{ y.name }}</a>
-                  {% endfor %}
-              </div>
-        </div>
-        {% endcomment %}
-{% show_categ %}
+{% show_categ as cat %}
+{% for x in cat %}
+    <a href="{{x.get_absolute_url}}">{{ x.name }}</a>
+
+{% endfor %}
+
+

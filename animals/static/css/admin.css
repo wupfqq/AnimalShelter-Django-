@@ -1,0 +1,29 @@
+#header{
+    background-color: #b71c1c;
+}
+a:link, a:visited{
+    color: #6a1a21;
+}
+#branding h1 a:visited{
+    color: white;
+}
+#branding h1 a:hover{
+    color: #000000;
+}
+
+.model-animal a{
+    color: #6a1a21;
+
+}
+.model-category a{
+    color: #6a1a21;
+}
+.model-curator a{
+    color: #6a1a21;
+}
+.module h2, .module caption, .inline-group h2{
+    background-color: #6a1a21;
+}
+div.breadcrumbs{
+    background-color: #6a1a21;
+}

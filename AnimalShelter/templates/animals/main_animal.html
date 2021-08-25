@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Josefin+Slab:wght@100&family=Urbanist:wght@100&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Animal Shelter Community</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% static 'css/Base/home_style.css' %}" rel="stylesheet">
+
+</head>
+{% block head %}
+<header class="main-header">
+<h1>Animal <br> shelters <br> community</h1>
+</header>
+{% endblock %}
+
+<body>
+
+
+<div class="panel">
+
+ <div class="drpan">
+   <form action="/animals" target="_blank">
+     <button class="butn">Our animals
+
+    </button>
+    <div class="drc">
+        {% block sidemenu %}{% endblock %}
+        {% include 'inc/_sidebar.html' %}
+    </div>
+   </div>
+   {% block horizont %}
+    <a href="{% url 'all_curators' %}">Our curators</a>
+
+    <a href="{% url 'registration' %}">Join us</a>
+    <a href="{%  url 'add_animal'%}">Add animal</a>
+    {% if  request.user.is_authenticated %}
+    <a href="{%url 'add_curator'%}">Add curator</a>
+
+    {% endif %}
+    <a href="{% url 'news' %}">Our news</a>
+       {% if  request.user.is_authenticated %}
+             <a href="{% url 'site_logout' %}">Log out</a>
+       {% else %}
+           <a href="{% url 'site_login' %}">Log in</a>
+       {% endif %}
+    {% endblock %}
+</div>
+
+
+<div class="about">
+    <h2>{% block title %}About us{% endblock %}</h2>
+
+{% block infomain %}
+       <p>
+         Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.
+
+    </p>
+ {% endblock %}
+</div>
+
+
+{% block info %}
+<div class="pets">
+    <h2>Our dogs</h2>
+    <img src="/media/MainpP/malpup.jpg" alt="Malamute puppy" class="circle" >
+    <p>
+
+         Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.
+
+    </p>
+</div>
+<div class="kit">
+    <h2>Our cats</h2>
+    <img src="/media/MainpP/kitten.webp" alt="Kitten" class="circle" >
+    <p>
+         Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.
+    </p>
+</div>
+<div class="pets">
+    <h2>Our birds</h2>
+    <img src="/media/MainpP/parrot.jpg" alt="Parrot" class="circle" >
+    <p>
+         Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.
+    </p>
+
+</div>
+    <div class="about">
+    <h2>And many many other animals</h2>
+    <p>
+         Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Maecenas eleifend elit neque,
+        quis consequat tellus fermentum in. Donec in gravida lorem, porta
+        faucibus diam. Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+        Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+        sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+        apien. Mauris tempor maximus nisi in ornare.
+    </p>
+
+</div>
+{% endblock %}
+
+{% if messages %}
+    {% for it in messages %}
+        {% if it.tags == "error" %}
+            <div>
+                <p>{{ it }}</p>
+            </div>
+        {% else %}
+            <div >
+                <p>{{ it }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+
+{% if page_obj.has_other_pages %}
+<div class="pages">
+{% if page_obj.has_previous %}
+        <div class="pagi">
+                  <a  href="?page={{page_obj.previous_page_number }}">Previous</a>
+                </div>
+{% endif %}
+
+
+      {% for p in page_obj.paginator.page_range %}
+          {% if page_obj.number == p %}
+                <div class="pagi">
+                  <a  class="tap" href="?page={{p }}">{{ p }}</a>
+                </div>
+          {% elif p > page_obj.number|add:-3 and  p < page_obj.number|add:3 %}
+                <div class="pagi">
+                  <a  href="?page={{p }}">{{ p }}</a>
+                </div>
+          {% endif %}
+
+{% endfor %}
+
+
+
+
+{% if page_obj.has_next %}
+        <div class="pagi">
+                  <a  href="?page={{page_obj.next_page_number }}">Next</a>
+                </div>
+{% endif %}
+</div>
+{% endif %}
+{% block contact %}
+<div class="contacts">
+    <h5>Our contacts</h5>
+    <p>Phone us!</p>
+<ul>
+    <li>xxxx-xxxx-xxxx</li>
+    <li>xxxx-xxxx-xxxx</li>
+    <li>xxxx-xxxx-xxxx</li>
+</ul>
+    <a href="{% url 'mess' %}">Or send e-mail to us(tap!)</a>
+    <h2>Visit us <br> and <br> find your friend here!</h2>
+</div>
+{% endblock %}
+</body>
+</html>

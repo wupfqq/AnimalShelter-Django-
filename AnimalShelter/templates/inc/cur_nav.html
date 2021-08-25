@@ -1,0 +1,27 @@
+
+{% load static %}
+
+{% for x in curator %}
+  <div class="navbar" style="background-image: url({% if x.photo %} '/media/{{x.photo}}'
+        {% elif x.category.back_photo %}
+
+ '/media/{{x.category.back_photo}}'  {% endif %} )">
+
+<div class="outtablet">
+
+    <h3 >{{ x.name }}</h3>
+    <h4 >{{ x.address}}</h4>
+    <p class="curator">Organization: {{ x.organization }}</p>
+</div>
+<div class="tablet">
+       <p class="description">{{ x.description }}</p>
+    </div>
+
+
+       </div>
+</div>
+{% endfor %}
+
+
+
+

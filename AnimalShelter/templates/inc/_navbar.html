@@ -1,16 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Главная</a>
-            <a class="nav-link active" aria-current="page" href="{%url 'add_products'%}">Добавить новость</a>
-        </li>
-      </ul>
+{% load static %}
+
+{% for x in animalcat %}
+  <div class="navbar" style="background-image: url({% if x.photo %} '/media/{{x.photo}}'
+        {% elif x.category.back_photo %}
+
+ '/media/{{x.category.back_photo}}'  {% endif %} )">
+
+<div class="outtablet">
+
+    <h3 >{{ x.name }}</h3>
+    <h4 >{{ x.age }} years  <br>{{ x.gender }}</h4>
+    <p class="curator">Curator: {{ x.curator }}</p>
+</div>
+<div class="tablet">
+    <p class="appearence"><strong><i>Appearence:</i></strong>  {{ x.appearence }}<br><br></p>
+    <p class="description"><strong><i>Decsription:</i></strong>{{ x.description }}</p>
     </div>
-  </div>
-</nav>
+      <div class="ava">
+   {% if x.available  %}
+          <p>In home searching...</p>
+          {% else %}
+               <p>Already found home!</p>
+          {%endif  %}
+      </div>
+
+       </div>
+</div>
+{% endfor %}
+
+
+
+

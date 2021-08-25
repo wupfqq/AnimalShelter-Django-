@@ -1,0 +1,25 @@
+{% extends 'animals/main_animal.html' %}
+
+{% block head %}
+
+      <header class="main-header" style="background-image: url('/media/photo/{{ title }}.jpeg')" >
+    <h1>Our <br> {{ title}}</h1>
+</header>
+  {% endblock %}
+{% block title %}About our {{ title}}{% endblock %}
+  {% block infomain %}
+    Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+      Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+      sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+      apien. Mauris tempor maximus nisi in ornare.Aliquam eros lectus, porttitor et mi nec, cursus elementum elit.
+      Maecenas euismod malesuada massa et posuere. Ut vel volutpat risus. Duis nisi nibh, pulvinar
+      sit amet ullamcorper eget, mollis sit amet purus. Nulla eget magna eget est lacinia posuere at sed s
+      apien. Mauris tempor maximus nisi in ornare.
+  {% endblock %}
+{% block info %}
+
+     {% include 'inc/newsbar.html' %}
+
+{% endblock %}
+{% block contact %}
+{% endblock %}
