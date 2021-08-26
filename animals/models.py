@@ -1,10 +1,11 @@
 from django.db import models
 from django.urls import reverse
 
-# Create your models here.
+
 class Animal(models.Model):
+    gender=[('M','Male'),('F','Female'),]
     name=models.CharField(max_length=35,db_index=True)
-    gender=models.CharField(max_length=6,)
+    gender=models.CharField(max_length=6,choices=gender,blank=False)
     age=models.DecimalField(decimal_places=1,max_digits=10)
     appearence=models.TextField(blank=True,)
     description=models.TextField(blank=True,verbose_name='Character',default='A very nice pet!')

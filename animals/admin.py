@@ -4,7 +4,7 @@ from django.utils.safestring import mark_safe
 from .models import Animal, Category, Curator, News
 
 
-# Register your models here.
+
 class AnimalAd(admin.ModelAdmin):
     list_display = ('name', 'gender', 'age', 'category', 'curator', 'aphoto','available')
     list_display_links = ('name', 'category')
