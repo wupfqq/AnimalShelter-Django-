@@ -18,8 +18,6 @@ class Animal(models.Model):
         return reverse('view_animals', kwargs={"animal_id": self.pk})
 
 
-
-
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='Category', db_index=True)
     photo = models.ImageField(upload_to='photo/category', blank=True)
